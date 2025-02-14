@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal Use</title>
+</head>
+<body>
+    
+</body>
+        <script>
+            //o template method é a melhor forma de você consumir menos linhas
+            //ajuda a escrever com menos codigo e com mais dinamismo
+
+            const Person = {   //construtor da classe pessoa
+                'live': 'Brazil',
+                'food': 'Carbonara',
+                'restaurant': 'Bololo',
+                'friend': 'Bolzani',
+            }
+
+
+            //muito grande fazer nesse metodo
+            const text =   
+            'Eu moro no ' + Person.live + ' e gosto de comer ' 
+            + Person.food + ' no restaurante ' + Person.restaurant + ' com a minha amiga ' + Person.friend + '!';
+            console.log(text)
+
+
+
+            //mais clareza e menos codigo
+            const newText = 
+            `Eu estou no restaurante ${Person.restaurant}, com minha amiga ${Person.friend} comendo um ${Person.food} aqui no ${Person.live}`;
+            console.log(newText)
+
+
+            // podemos fazer uma lista dentro da const também
+            const friends = `\n`
+            + 'Bolzani'
+            + `\n`
+            + 'Angeloti'
+            + `\n`
+            + 'Juju Guineis';
+
+            console.log(`Essa é a lista da minhas amigas: ${friends}`)
+
+            //essa forma de fazer a lista de template possui menos código ainda
+const friendsMale = `
+Ryan
+Kevin
+PH`
+
+            console.log(`Este é a lista dos meus amigos: ${friendsMale}`)
+
+            </script>
+</html>

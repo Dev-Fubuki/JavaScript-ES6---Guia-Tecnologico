@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const</title>
+</head>
+<body>
+    
+</body>
+    <script>
+
+        //Const é uma variavel "Imutavel", mas as propriedades dentro de seu Objeto não são imutaveis
+        //Uso do Object.Freeze, bloqueando as propriedades do Objeto
+
+        const dev = {
+            'name': 'gabriel',
+            'age': '23',
+        }
+        console.log(dev);
+
+        //definição do objeto da const
+
+        dev.name = 'fubuki',
+        dev.age = '24',
+        console.log(dev);
+
+        //atualização dos atributos da const
+
+        const FrezeName = {
+            'name': 'dev-fubuki',
+            'age': '20',
+        }
+        console.log(FrezeName);
+        Object.freeze(FrezeName);
+
+        //construção da nova const e deixar ela "congelada", não pode ser alterada
+
+        FrezeName.name = 'Congelar é Top',
+        FrezeName.age = '20',
+        console.log(FrezeName)
+        console.log('Object.freeze() não deixa o objeto ser alterado')
+
+        //Object.freeze() não deixa o objeto ser alterado
+
+        
+    </script>
+</html>

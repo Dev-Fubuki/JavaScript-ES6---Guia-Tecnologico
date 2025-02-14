@@ -1,0 +1,42 @@
+//ao usar arrow function inves do function para o evento, irá pegar o contexto inteiro do "click" 
+(Window {window: Window, self: Window, document: document, name: '', location: Location, …})
+//arrowFunction será bem usada quando vc precisa usar uma função dentro de uma função
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Object =></title>
+</head>
+<body>
+        <button id="btn">Make me a Sandwich!</button>
+</body>
+    <script>
+
+            const Sandwich = {          
+                'bread': 'francês',
+                'cheese': 'cheddar',  //objeto sandwich
+                
+                prepare: function(){
+                    return `Eu quero um Sandwich com pão ${this.bread} e queijo ${this.cheese}`; //função de retorno
+            },
+
+
+
+            make: function() { 
+                var that = this;  
+                window.setTimeout(() => { //o uso de arrowfuncion para usar funçoes dentro de funçoes
+                    console.log(this.prepare());
+                }, 500);
+            }
+        }
+
+
+
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function() {Sandwich.make() });
+            
+    </script>
+</html>

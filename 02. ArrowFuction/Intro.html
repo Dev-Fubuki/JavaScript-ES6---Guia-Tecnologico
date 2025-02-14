@@ -1,0 +1,54 @@
+//Usabilidade do arrowFunction
+//A arrow function em JavaScript é uma forma mais concisa de escrever funções
+//Ideal para funções pequenas, como em métodos de arrays
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        const archers = ['Robin' , 'Legolas', 'Katniss'];
+
+        // Função tradicional
+        const bowAndArrow = archers.map(function(ArcherName) {
+            return `${ArcherName} é um arqueiro habilidoso com arco e flecha!`;
+        });
+
+        // Arrow function
+        const arrowFunction = archers.map((ArcherName) => {
+            return `${ArcherName} mira e atira com arco e flecha!`;
+        });
+
+        // ArrowF com Apenas um Parametro não precisa de vários parenteses de chamada de função 
+
+        const arrowFunctionSingle = archers.map(ArcherName => {
+            return `${ArcherName} gosta de praticar arco e flecha sozinho...`;
+        });
+
+        // ArromF com apenas um parametro pode ser escrito com menos linha de código
+
+        const arrowFunctionOneLine = archers.map(ArcherName => `${ArcherName} caça seu alvo sorrateiramente...`);
+
+        const arrowChain = archers
+                                    .filter(ArcherName => ArcherName === 'Katniss')
+                                    .map(ArcherName => `${ArcherName} é a melhor arqueira de todas e venceu o jogos vorazes`);
+
+        
+        
+                                    
+
+        console.log(bowAndArrow);
+        console.log(arrowFunction);
+        console.log(arrowFunctionSingle);
+        console.log(arrowFunctionOneLine);
+        console.log(arrowChain);
+        
+
+    </script>
+</html>

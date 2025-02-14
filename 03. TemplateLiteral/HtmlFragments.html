@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+    <script>
+
+            const article = {
+                'title': 'Elon Musk compra OpenIA',
+                'intro': 'Dono da Tesla acaba de adquirir o total dominio da OpenIA por 536 Bilhoes de Dolares',
+                'body':   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptas consectetur quo nobis reprehenderit numquam distinctio a sequi dignissimos. Porro qui aliquam modi! Voluptate consequuntur, distinctio amet autem ratione possimus?',
+                'tags': ['es6', 'js6', 'template-literal']
+            };
+
+            const markUp = `
+                <article>
+                    <header>
+                        <h1>${article.title}</h1>
+                            </header>
+                            <section> 
+                                <p> ${article.intro} </p>
+                                </section>
+                                <footer>
+                                    <ul>
+                                        ${article.tags.map((tag) => <li>${tag}</li>)}
+                                        </ul>
+                                        </footer>
+                            </article>`;
+
+        </script>
+</html>
