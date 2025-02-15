@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+
+    .green {   
+  color: green;
+  font-size: 25px;
+    }
+
+    
+    </style>
+<body>
+</body>
+    <script>
+
+
+        const city = 'Ilheus';
+        const gaga = 'Solange';
+        const gaga2 = 'Creomilda';
+
+        function callColor(template,...values) {
+            return template.reduce((accumulator, part, i) => {
+            return `
+                 ${accumulator}
+                <span class='green'>${values[i - 1] ? values[i - 1].toUpperCase() : ''}</span>
+                 ${part}
+                `;
+                }, "");
+
+    }
+
+        const panico = callColor`Eu fui para ${city} e encontrei a ${gaga} e a ${gaga2}`
+
+        document.body.innerHTML = panico
+
+
+    </script>
+</html>
