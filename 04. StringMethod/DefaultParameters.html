@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters</title>
+</head>
+<body>
+    
+</body>
+    <script>
+
+
+        //modo antigo 
+        function hello(name, surname){ //função criada
+
+            name = name || 'Kiana' //definição de parametro 
+            surname = surname || 'Kaslana'
+
+
+            console.log(`Hello ${name} ${surname}! How are you?`)
+
+        }
+
+        hello(); //chamada da função
+
+
+
+        //uso de default parameters 
+        function defaultHello(name =  'Kevin', surname = 'Kaslana'){ //função criada
+        console.log(`Hello ${name} ${surname}! How are you?`)
+
+        }
+
+        defaultHello('Herscheer', 'Of Void'); //chamada da função usando os default parameters
+        //caso não tenha nenhum parametro, ela irá chamar os default parameters 'Kevin', 'Kaslana'
+
+
+
+
+    </script>
+</html>

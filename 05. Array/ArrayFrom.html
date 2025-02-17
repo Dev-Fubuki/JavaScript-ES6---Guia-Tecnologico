@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array From</title>
+</head>
+<body>
+
+        <ul id="FacebookList">
+            <li>Elon Musk</li>
+            <li>Grimes</li>
+            <li>Mourão</li>
+            <li>Nicolas Ferreira</li>
+
+        </ul>
+
+</body>
+    <script>
+
+    
+
+         //const FacebookArray = 'Mark Zuckerberg é um cara legal'  
+                                                        //transformando um texto em Array
+         //console.log(Array.from(FacebookArray));
+
+        const FacebookList = document.querySelectorAll('#FacebookList li'); //inicialmente, nodeList
+        const FacebookListArray = Array.from(FacebookList) //Transformação em Array
+
+        console.log(FacebookListArray)  
+
+        const names = FacebookListArray.
+        map((names) => names.textContent);  //manipulação de acesso dos conteudos dentro do Li/Array
+
+        console.log(names);
+
+    </script>
+</html>

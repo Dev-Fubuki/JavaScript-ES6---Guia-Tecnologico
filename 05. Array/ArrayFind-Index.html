@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Find & Index</title>
+</head>
+<body>
+</body>
+
+    <script>
+
+            const data = [ //array que busca dados
+                {
+                'name': 'Satoshi',
+                'age': '11',
+                'city': 'Hokaido',
+                },
+                {
+                'name': 'Musahsi',
+                'age': '13',
+                'city': 'Tokyo', 
+                }
+            ]
+
+            //const sampleArray = [4, -5, 0, -1];
+
+
+            //const underZero = sampleArray.
+            //find(x => x < 0); //busca todos elementos menores que zero "x" = todos
+            //console.log(underZero) //responde com -5
+
+            
+
+            //const underZeroIndex = sampleArray.
+            //findIndex(x => x < 0 )
+            //console.log(underZeroIndex)
+
+            const cityFilter = data.find(personData => personData.city == 'Hokaido')
+            const ageFilter = data.findIndex(personData => personData.age == '13') //filtra a cidade de Hokaido e mostra os dados pertencentes
+            console.log(cityFilter)
+            console.log(ageFilter) // retorna um pois é o indice dele no array
+
+
+
+    </script>
+</html>
